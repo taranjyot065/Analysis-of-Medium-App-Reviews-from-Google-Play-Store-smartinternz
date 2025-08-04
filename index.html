@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Medium App Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+        .bg-custom-green {
+            background-color: #2b6140;
+        }
+        .text-custom-pink {
+            color: #d85777;
+        }
+        .navbar-link.active {
+            border-bottom: 2px solid white;
+        }
+        .contact-icon {
+            color: #d85777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-black text-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">ANALYSIS OF MEDIUM APP REVIEWS FROM GOOGLE PLAY STORE</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="navbar-link px-2 py-1 hover:text-gray-300 transition-colors duration-300">Home</a></li>
+                    <li><a href="#about" class="navbar-link px-2 py-1 hover:text-gray-300 transition-colors duration-300">About</a></li>
+                    <li><a href="#contact" class="navbar-link px-2 py-1 hover:text-gray-300 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-0">
+
+        <!-- Home Page -->
+        <div id="home" class="page-content active">
+            <div class="relative bg-custom-green text-white text-center py-20 px-6 sm:px-12 md:px-24 rounded-b-xl shadow-lg">
+                <!-- Using a placeholder image to match the provided screenshot background -->
+                <img src="https://placehold.co/1920x800/2b6140/ffffff?text=Medium" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-b-xl" alt="Background graphic">
+                <div class="relative z-10">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
+                        WELCOME TO THE ANALYSIS OF MEDIUM APP REVIEWS
+                    </h2>
+                    <p class="text-lg sm:text-xl font-medium mb-8">
+                        Understanding User Sentiments from Google Play Store Reviews
+                    </p>
+                    <a href="#predict" class="bg-white text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        ANALYZE YOUR REVIEW
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page-content">
+            <div class="bg-white p-12 rounded-xl shadow-lg my-12">
+                <div class="bg-gray-100 py-3 px-6 inline-block rounded-full mb-8">
+                    <h3 class="text-sm font-semibold uppercase tracking-wide text-gray-600">ABOUT</h3>
+                </div>
+                <h2 class="text-4xl font-extrabold mb-8 text-center text-custom-pink">
+                    Discover Our Insights
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700 leading-relaxed">
+                    <div class="space-y-4">
+                        <p>Our project focuses on analyzing user reviews for the Medium app from the Google Play Store. By leveraging advanced natural language processing techniques, we aim to provide insights into user sentiments, app features, and areas for improvement.</p>
+                        <ul class="space-y-2 font-medium">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sentiment Analysis: Understanding user sentiments expressed in reviews.</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Feature Analysis: Identifying key features that users love or dislike.</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Improvement Suggestions: Highlighting potential areas for app enhancement based on user feedback.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>The goal is to assist app developers and stakeholders in making informed decisions based on user feedback, ultimately leading to an enhanced user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Predict/Input Page -->
+        <div id="predict" class="page-content">
+            <div class="bg-gray-100 p-6 sm:p-12 md:p-16 rounded-xl shadow-lg my-12">
+                <div class="flex items-center mb-6 text-gray-500 text-sm">
+                    <a href="#home" class="hover:underline">Home</a>
+                    <span class="mx-2">/</span>
+                    <span>Predict Page</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-gray-800 mb-8 text-center">Input Text for Analysis</h2>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <textarea id="inputText" class="w-full h-40 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="Enter your review here..."></textarea>
+                    <div class="flex justify-center mt-6 space-x-4">
+                        <button id="analyzeButton" class="bg-custom-green text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                            Analyze
+                        </button>
+                        <a href="#home" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Output Page -->
+        <div id="output" class="page-content">
+            <div class="bg-gray-100 p-6 sm:p-12 md:p-16 rounded-xl shadow-lg my-12">
+                <div class="flex items-center mb-6 text-gray-500 text-sm">
+                    <a href="#home" class="hover:underline">Home</a>
+                    <span class="mx-2">/</span>
+                    <span>Output</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-gray-800 mb-8 text-center">Sentiment Analysis Result for Medium App Reviews</h2>
+                <div id="resultContainer" class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg text-center">
+                    <p class="text-lg font-semibold text-gray-600 mb-4">Your Review:</p>
+                    <p id="reviewText" class="text-xl font-medium text-gray-800 italic mb-6"></p>
+                    <p class="text-lg font-semibold text-gray-600 mb-4">Sentiment:</p>
+                    <p id="sentimentResult" class="text-4xl font-extrabold tracking-wide text-custom-pink"></p>
+                    <a href="#predict" class="inline-block mt-8 bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        Analyze Another Review
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page-content bg-white p-12 rounded-xl shadow-lg my-12 text-center">
+            <div class="bg-gray-100 py-3 px-6 inline-block rounded-full mb-8">
+                <h3 class="text-sm font-semibold uppercase tracking-wide text-gray-600">CONTACT</h3>
+            </div>
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-8">Get in <span class="text-custom-pink">Touch</span></h2>
+            <div class="max-w-md mx-auto grid grid-cols-1 gap-8 text-gray-700">
+                <div class="flex items-start text-left">
+                    <svg class="w-8 h-8 contact-icon flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+                    <div>
+                        <p class="font-bold">Location:</p>
+                        <p>123 Review St, City, Country 12345</p>
+                    </div>
+                </div>
+                <div class="flex items-start text-left">
+                    <svg class="w-8 h-8 contact-icon flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+                    <div>
+                        <p class="font-bold">Email:</p>
+                        <p>info@mediumreviewanalysis.com</p>
+                    </div>
+                </div>
+                <div class="flex items-start text-left">
+                    <svg class="w-8 h-8 contact-icon flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5c-.75 0-1.5.25-2 .75-.5-.5-.75-1.25-.75-2-.25.5-.5.75-1.25.75-2-.25.5-.5.75-1.25.75-2-.75-1.25-2-.75-2s-.75-.25-1.25-.75-1.25.75-2 .25-.75-1.25-.75-2-1.1-2-1.25-.75-2-2.25-2-2.75-1.25-2.75-2.25c.5-.75.75-1.25.75-2-.75-.25-1.25-.5-1.25-.75s.5-.5 1.25-.75c.75-.25 1.25-.75 1.25-1.5s-.5-.75-1.25-.75c-.75-.25-1.5-.5-2-.75-.5-.5-.75-1.25-.75-2-.25.5-.5.75-1.25.75-2-.25.5-.5.75-1.25.75-2-.75-1.25-2-.75-2s-.75-.25-1.25-.75-1.25.75-2 .25-.75-1.25-.75-2-1.1-2-1.25-.75-2-2.25-2-2.75-1.25-2.75-2.25c.5-.75.75-1.25.75-2-.75-.25-1.25-.5-1.25-.75s.5-.5 1.25-.75c.75-.25 1.25-.75 1.25-1.5s-.5-.75-1.25-.75c-.75-.25-1.5-.5-2-.75-.5-.5-.75-1.25-.75-2-.25.5-.5.75-1.25.75-2-.25.5-.5.75-1.25.75-2-.75-1.25-2-.75-2s-.75-.25-1.25-.75-1.25.75-2 .25-.75-1.25-.75-2-1.1-2-1.25-.75-2-2.25-2-2.75-1.25-2.75-2.25c.5-.75.75-1.25.75-2-.75-.25-1.25-.5-1.25-.75s.5-.5 1.25-.75c.75-.25 1.25-.75 1.25-1.5s-.5-.75-1.25-.75z"></path></svg>
+                    <div>
+                        <p class="font-bold">Call:</p>
+                        <p>+1 2345 67890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pages = document.querySelectorAll('.page-content');
+            const navLinks = document.querySelectorAll('.navbar-link');
+            const analyzeButton = document.getElementById('analyzeButton');
+            const reviewTextElement = document.getElementById('reviewText');
+            const sentimentResultElement = document.getElementById('sentimentResult');
+            const inputTextarea = document.getElementById('inputText');
+
+            // Function to handle page navigation
+            function showPage(pageId) {
+                pages.forEach(page => page.classList.remove('active'));
+                const pageToShow = document.getElementById(pageId);
+                if (pageToShow) {
+                    pageToShow.classList.add('active');
+                }
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${pageId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Get initial page from hash or default to home
+            const initialPage = window.location.hash.substring(1) || 'home';
+            showPage(initialPage);
+
+            // Handle navigation clicks
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor link behavior
+                    const targetId = e.currentTarget.getAttribute('href').substring(1);
+                    window.location.hash = targetId; // Update the URL hash
+                    showPage(targetId);
+                });
+            });
+
+            // Handle Analyze button click
+            analyzeButton.addEventListener('click', () => {
+                const review = inputTextarea.value;
+                if (review.trim() === '') {
+                    // Custom modal for user feedback
+                    const modal = document.createElement('div');
+                    modal.style.position = 'fixed';
+                    modal.style.top = '50%';
+                    modal.style.left = '50%';
+                    modal.style.transform = 'translate(-50%, -50%)';
+                    modal.style.backgroundColor = 'white';
+                    modal.style.padding = '20px';
+                    modal.style.borderRadius = '10px';
+                    modal.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                    modal.style.zIndex = '1000';
+                    modal.innerHTML = `
+                        <p class="text-center">Please enter a review to analyze.</p>
+                        <button onclick="this.parentElement.remove()" class="mt-4 block mx-auto bg-blue-600 text-white font-bold py-2 px-4 rounded-full">OK</button>
+                    `;
+                    document.body.appendChild(modal);
+                    return;
+                }
+
+                reviewTextElement.textContent = `"${review}"`;
+
+                // Simple placeholder logic for sentiment analysis
+                const random = Math.random();
+                let sentiment;
+                if (random < 0.33) {
+                    sentiment = 'POSITIVE';
+                    sentimentResultElement.classList.remove('text-custom-pink', 'text-gray-500');
+                    sentimentResultElement.classList.add('text-green-500');
+                } else if (random < 0.66) {
+                    sentiment = 'NEUTRAL';
+                    sentimentResultElement.classList.remove('text-custom-pink', 'text-green-500');
+                    sentimentResultElement.classList.add('text-gray-500');
+                } else {
+                    sentiment = 'NEGATIVE';
+                    sentimentResultElement.classList.remove('text-green-500', 'text-gray-500');
+                    sentimentResultElement.classList.add('text-custom-pink');
+                }
+                sentimentResultElement.textContent = sentiment;
+                
+                window.location.hash = 'output'; // Update the URL hash
+                showPage('output');
+            });
+            
+            window.addEventListener('hashchange', () => {
+                const pageId = window.location.hash.substring(1) || 'home';
+                showPage(pageId);
+            });
+        });
+    </script>
+</body>
+</html>
